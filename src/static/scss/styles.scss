@@ -1,2 +1,26 @@
-@import './modules/header';
+@import './layout/header';
+@import './layout/footer';
+@import './layout/form';
 @import './helpers/libs';
+@import './helpers/vars';
+@import './helpers/fonts';
+@import './helpers/mixins';
+
+html {
+  font-size: 62.5%;
+
+  @include respond(phone) {
+    font-size: 70.5%;
+  }
+}
+
+body {
+  font-family: 'Harriet', sans-serif;
+  background-color: $white-color;
+}
+
+.container {
+  max-width: 68rem;
+  padding: 20px;
+  margin: 0 auto;
+}

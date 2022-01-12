@@ -1,0 +1,37 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint==phoneXS {
+    @media only screen and (max-width: 25.1875em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 42.1875em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width: 56.8em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width: 70em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==ipad {
+    @media only screen and (min-height: 1000px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
